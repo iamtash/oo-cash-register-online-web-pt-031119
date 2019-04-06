@@ -1,6 +1,6 @@
 class CashRegister
 
-  attr_reader :total :items
+  attr_reader :total, :employee_discount, :items
 
   def initialize(employee_discount = nil)
     @total = 0
