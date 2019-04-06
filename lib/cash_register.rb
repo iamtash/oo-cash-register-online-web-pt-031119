@@ -2,9 +2,9 @@ class CashRegister
 
   attr_accessor :total, :employee_discount, :items
 
-  def initialize(employee_discount = nil)
+  def initialize(employee_discount = 0)
     @total = 0
-    @employee_discount = employee_discount if employee_discount
+    @employee_discount = employee_discount * .1 if employee_discount > 0
     @items = []
   end
 
@@ -14,7 +14,7 @@ class CashRegister
   end
 
   def apply_discount
-    self.total = self.total * self.employee_discount * 0.1
+    self.total = self.total * self.employee_discount
   end
 
   def void_last_transaction
