@@ -1,12 +1,12 @@
 class CashRegister
   
+  attr_reader :total :items
+  
   def initialize(employee_discount = nil)
     @total = 0
     @employee_discount = employee_discount
     @items = []
   end
-
-  attr_reader :total :employee_discount :items
 
   def add_item(title, price, quantity = 1)
     self.items << title
