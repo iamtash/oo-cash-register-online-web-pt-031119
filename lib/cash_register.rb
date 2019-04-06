@@ -22,7 +22,7 @@ class CashRegister
     if self.discount > 0
       #binding.pry
       self.total -= self.total * 0.01 * self.discount
-      "After the discount, the total comes to $#{self.total}."
+      "After the discount, the total comes to $#{self.total.to_i}."
     else
       "There is no discount to apply."
     end
