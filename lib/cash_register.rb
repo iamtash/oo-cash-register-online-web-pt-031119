@@ -4,7 +4,7 @@ class CashRegister
 
   def initialize(employee_discount = 0)
     @total = 0
-    @employee_discount = employee_discount * .1 if employee_discount > 0
+    @employee_discount = employee_discount * 0.1 if employee_discount > 0
     @items = []
   end
 
