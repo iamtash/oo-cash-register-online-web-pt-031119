@@ -14,7 +14,9 @@ class CashRegister
   end
 
   def apply_discount
-    self.discount > 0 ? self.total *= self.discount :
+    if self.discount > 0
+      self.total *= self.discount
+    end
   end
 
   def void_last_transaction
