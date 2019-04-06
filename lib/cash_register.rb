@@ -13,6 +13,7 @@ class CashRegister
   end
 
   def apply_discount
+    self.total = self.total * self.employee_discount * 0.1
   end
 
   def void_last_transaction
